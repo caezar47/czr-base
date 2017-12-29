@@ -1,0 +1,58 @@
+.kontakty-panel__{
+	&block{	
+	}
+	&row{
+		margin-bottom: 25px;
+		@media @media-point-notsmart {
+			justify-content: center;
+		}
+		@media @media-point-screen {
+			margin-bottom: 2vw;
+		}
+	}
+	&item{
+	}
+	&map{
+		height: 500px;
+	}
+}
+
+.kontakty-item__{
+	&item{
+		position: relative;
+		//
+		&, &:hover, &:focus{
+			color: @b-color-h;
+		}
+		span{
+			font-weight: 700;
+			color: @green-dark;
+		}
+		&.is--icon{
+			padding-left: 40px;
+		}
+		font-size: @b-fs - 2;
+	}
+	&link{
+		display: block;
+		a[href^="mailto:"]&,
+		a[href^="tel:"]&,
+		&, &:hover, &:focus{
+			color: @b-color-h;
+		}
+	}
+	&icon{ 
+		position: absolute;
+		top: 50%; 
+		left: 0;
+		transform: translateY(-50%);
+		transition: @trs-site;
+		width: 30px;
+		height: 30px;
+		border: 2px solid @b-color-a;
+		border-radius: 50%;
+		color: @green-dark;
+		padding: 6px;
+		svg{display: block;}
+	}
+}

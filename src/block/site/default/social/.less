@@ -1,0 +1,128 @@
+//===== social =====//
+@soc_size: 					32px;
+@soc_border_radius: 		0%;
+@soc_border: 				none;
+@soc_bg: 					#764E26;
+@soc_bg_hover: 				@b-color-a;
+@soc_color: 				@b-color-h;
+@soc_color_hover: 			@white;
+@soc_color_contacts:		@b-color;
+@soc_gutter:				10px; 
+.social__{
+	&block{}
+	&row{ 
+		align-items: center;		
+		margin-left: -(@soc_gutter);
+		margin-right: -(@soc_gutter);
+		@media @media-point-xxs {
+			margin-left: -(@soc_gutter - 5px);
+			margin-right: -(@soc_gutter - 5px);	
+		}		
+		@media @media-point-md2 {
+			margin-left: -(@soc_gutter - 2.5px);
+			margin-right: -(@soc_gutter - 2.5px);	
+		}	
+	}
+	&cols{
+		padding-left: @soc_gutter;
+		padding-right: @soc_gutter;
+		@media @media-point-xxs {
+			padding-left: @soc_gutter - 5px;
+			padding-right: @soc_gutter - 5px;
+		}
+		@media @media-point-md2 {
+			padding-left: @soc_gutter - 5px;
+			padding-right: @soc_gutter - 5px;
+		}
+	}
+	&heading{	
+	}
+	&item{
+		display: block;
+		width: @soc_size;
+		height: @soc_size;
+		//padding: 6px;
+		&, &:focus{color: @soc_color;} 
+		svg{display: block;}
+		&.is--footer{	
+			//border-radius: 50%;	 
+			//background-color: @blue-light;
+			&, &:focus{color: @soc_bg;} 		
+			@media @media-point-screen {
+				width: @soc_size + 8;
+				height: @soc_size + 8;
+				//padding: 5px;
+			}
+			@media @media-point-md2 {
+				//width: @soc_size - 6;
+				//height: @soc_size - 6;
+				//padding: 4px;
+
+			}
+		}
+		&.is--vk{
+			&:hover{
+				color: @color-vk;			
+			}
+		}
+		&.is--fb{
+			&:hover{
+				color: @color-fb;		
+			}
+		}
+		&.is--inst{
+			&:hover{
+				color: @color-inst;			
+			}	
+		}
+		&.is--ok{
+			&:hover{
+				color: @color-ok;			
+			}	
+		}
+		&.is--tw{
+			&:hover{
+				color: @color-tw;			
+			}
+		}
+	}
+}
+.social-contacts__{
+	&block{}
+	&row{		
+		margin-left: -(@soc_gutter) - 15px;
+		margin-right: -(@soc_gutter) - 15px;
+	}
+	&cols{
+		padding-left: @soc_gutter + 15px;
+		padding-right: @soc_gutter + 15px;
+	}
+	&item{
+		position: relative;
+		padding-left: 45px;
+		@media @media-point-smart {
+			padding-left: 0;
+		}
+	}
+	&item-icon{
+		@media @media-point-smart {
+			display: none;
+		}
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 30px;
+		height: 30px;
+		border-width: 2px;
+		border-style: solid;
+		border-radius: 50%;
+		padding: 6px;
+		&.is--footer{
+			border-color: @b-color-a;
+			color: @b-color-a;
+		}
+		svg{display: block;}
+	}
+	&item-name{}
+}

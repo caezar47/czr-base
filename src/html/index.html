@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="ru-RU"> 
+	<head>
+		[[azbntple 
+			tpl="/src/block/site/default/head/.html" 
+			title=" "
+			description=" "
+		]] 		
+	</head>
+	<body> 
+		[[azbntple 
+			tpl="/src/block/site/default/navbar/.html"
+			class="navbar-site scroll"
+			navbar_prefix="navbar__"   
+			navbar_mod="  "     
+		]] 
+		[[azbntple 
+			tpl="/src/block/site/default/header/panel.html"
+			block_prefix="header-block__"
+			block_slider_id="header-slider"
+			block_heading="  "
+			block_heading_small=""
+		]]	
+		[[azbntple  
+			tpl="/src/block/site/page/index/products-best.html"
+			content_prefix="content-block__"      
+			content_mod="  " 
+			block_heading="Хиты продаж"
+			block_heading_mod="is--center  is--page-heading  color--green-dark"
+		]]
+		[[azbntple  
+			tpl="/src/block/site/page/index/about.html"
+			content_prefix="content-block__"      
+			content_mod="is--grey" 
+			block_heading="Кто мы"
+			block_heading_mod="is--center  is--page-heading  color--green-dark"
+		]]
+		[[azbntple  
+			tpl="/src/block/site/page/index/partners.html"
+			content_prefix="content-block__"      
+			content_mod="  " 
+			block_heading="Наши партнеры"
+			block_heading_mod="is--center  is--page-heading  color--green-dark"
+		]]
+		[[azbntple 
+			tpl="/src/block/site/default/footer/.html"
+			footer_prefix="footer__" 
+		]]		
+		[[azbntple tpl="/src/block/site/default/script/script.html" ]]  
+	</body>
+</html>

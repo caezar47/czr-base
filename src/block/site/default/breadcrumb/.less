@@ -1,0 +1,98 @@
+.breadcrumb__{
+	@gutter: 23px;
+	@gutter_top: 5px;
+	&block{
+		margin-bottom: 10px;
+		@media print{display: none;} 
+		&.is--heading{}
+	}
+	&list{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0;
+		list-style: none;
+		font-size: @b-fs;
+		line-height: @b-lh;
+		margin-top: -(@gutter_top);
+		font-size: @bread_fs;
+		line-height: @bread_lh;
+		margin-left: -@gutter + 8;
+		margin-right: -@gutter + 8;		
+		@media @media-point-notsmart {			
+			&.is--center{justify-content: center;}
+		}
+		@media @media-point-screen {			
+			margin-left: -@gutter;
+			margin-right: -@gutter;
+		}
+	} 
+	&list-item{
+		position: relative;	
+		padding-top: @gutter_top;
+		padding-left: @gutter - 8;
+		padding-right: @gutter - 8;	
+		color: @bread_color;
+		@media @media-point-screen {
+			padding-left: @gutter;
+			padding-right: @gutter;	
+		}	
+		&:after,		
+		&:before{
+			content: ''; 
+			position: absolute;
+			top: 60%;
+			transform: translate(50%, -50%);
+			background-color: @bread_color_active;
+			width: 2px;
+			height: 2px;
+		}			
+		&:before{
+			right: -4px;
+		}		
+		&:after{
+			right: -10px;
+		}
+		&.is--active{
+			font-weight: 700;
+			color: @bread_color_active;
+			&::before,	
+			&::after{display: none}	
+		}
+
+	}
+	&list-link{
+		&, &:focus{color: @bread_color;}
+		&:hover{color: @bread_color_active}
+
+		&:after,		
+		&:before{
+			content: ''; 
+			position: absolute;
+			top: 60%;
+			transform: translate(50%, -50%);
+			background-color: @bread_color_active;
+			width: 2px;
+			height: 2px;
+		}			
+		&:before{
+			right: 2px;
+		}		
+		&:after{
+			right: 8px;
+		}
+		.breadcrumb__list-item.is--active &{
+			color: @bread_color_active;
+			&::before,	
+			&::after{display: none}	
+		}
+	}
+	/*&list-icon{
+		width: 15px;
+		height: 15px;
+		display: block;
+		position: absolute;
+		top: 50%;
+		right: 0px;
+		transform: translate(50%, -35%);
+	}*/
+}

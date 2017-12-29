@@ -1,0 +1,30 @@
+.bg-block__{
+	&block{
+		overflow: hidden;
+		position: relative;
+	}
+	&container{
+		position: relative;
+		z-index: 5;
+	}
+	&item{
+		@media @media-point-device {display: none;}
+		position: absolute;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		@media @media-point-md2 {
+			&.is--blog-item{display: none;}
+		}	
+		&.is--about-index{
+			z-index: 1;
+			max-width: 810px;
+			max-height: 730px;
+			width: 44vw;
+			height: 40vw; 
+			bottom: 0vw;
+			right: 0vw;	
+			background-position: bottom right;
+		}
+	}
+}
